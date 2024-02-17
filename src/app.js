@@ -10,7 +10,7 @@ require('dotenv/config')
 
 //middleware
 app.use(express.json());
-app.use(cors({origin : ['http://127.0.0.1:5500',"https://myshop-gui-ibrahim1osman1ahemd.onrender.com/"]}));
+app.use(cors({origin : "*"}));
 app.use(morgan('tiny'));
 app.use('/profile', auth , (req,res) => res.send("Auth"));
 
